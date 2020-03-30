@@ -1,4 +1,12 @@
-﻿$(document).ready(function () {
+﻿function DeletePrevValidError(id) {
+    var reg = '[id*=' + id.substring(1) + ']';
+    var warning = $(reg);
+    if (warning.length > 1) {
+        warning[1].remove();
+    }
+}
+
+$(document).ready(function () {
     var dropDownLists = [];
     $.each($("[id^=personTypes]"), function () {
         dropDownLists.push($(this).attr('id'));
@@ -31,22 +39,27 @@
                     $(childID).remove();
                 }
                 if (dropDownListVal == "Disabled") {
+                    DeletePrevValidError(id);
                     $("<label for='DisabledLabel' id='" + disabledID.substring(1) + "' class='labelMini'>Please, enter your number of certificate invalidity: </label>").insertAfter($(id));
                     $("<input type='text' required='required' class='textBoxMini' name='NumbOfCertificateInvalidity' />").insertAfter($(disabledID));
                 }
                 else if (dropDownListVal == "Student") {
+                    DeletePrevValidError(id);
                     $("<label for='StudentLabel' id='" + studentID.substring(1) + "' class='labelMini'>Please, enter your student card id: </label>").insertAfter($(id));
                     $("<input type='text' required='required' class='textBoxMini' name='StudentCardID' />").insertAfter($(studentID));
                 }
                 else if (dropDownListVal == "Pensioner") {
+                    DeletePrevValidError(id);
                     $("<label for='PensionerLabel' id='" + pensionerID.substring(1) + "' class='labelMini'>Please, enter your number of pension certificate: </label>").insertAfter($(id));
                     $("<input type='text' required='required' class='textBoxMini' name='NumbOFPensionCertificate' />").insertAfter($(pensionerID));
                 }
                 else if (dropDownListVal == "Child") {
+                    DeletePrevValidError(id);
                     $("<label for='ChildLabel' id='" + childID.substring(1) + "' class='labelMini'>Please, enter your school ticket number: </label>").insertAfter($(id));
                     $("<input type='text' required='required' class='textBoxMini' name='SchoolTicket' />").insertAfter($(childID));
                 }
                 else {
+                    DeletePrevValidError(id);
                     if ($(disabledID)[0]) {
                         $(disabledID).next("input").remove();
                         $(disabledID).remove();

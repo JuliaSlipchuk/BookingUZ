@@ -64,7 +64,12 @@ function validate() {
             var text = document.createTextNode("You entered invalid disabled card id");
             p.appendChild(text);
             p.setAttribute('class', 'validateError');
-            disables[i].after(p);
+            var prevSibling = disables[i].previousSibling;
+            var id = prevSibling.id + 'disableValidError';
+            p.setAttribute('id', id);
+            if (!$('#' + id)[0]) {
+                disables[i].after(p);
+            }
             check = false;
         }
     }
@@ -77,7 +82,12 @@ function validate() {
             var text = document.createTextNode("You entered invalid student card id");
             p.appendChild(text);
             p.setAttribute('class', 'validateError');
-            students[i].after(p);
+            var prevSibling = students[i].previousSibling;
+            var id = prevSibling.id + 'studentValidError';
+            p.setAttribute('id', id);
+            if (!$('#' + id)[0]) {
+                students[i].after(p);
+            }
             check = false;
         }
     }
@@ -90,7 +100,12 @@ function validate() {
             var text = document.createTextNode("You entered invalid pensioner card number id");
             p.appendChild(text);
             p.setAttribute('class', 'validateError');
-            pensioners[i].after(p);
+            var prevSibling = pensioners[i].previousSibling;
+            var id = prevSibling.id + 'pensionerValidError';
+            p.setAttribute('id', id);
+            if (!$('#' + id)[0]) {
+                pensioners[i].after(p);
+            }
             check = false;
         }
     }
@@ -103,7 +118,12 @@ function validate() {
             var text = document.createTextNode("You entered invalid school ticket id");
             p.appendChild(text);
             p.setAttribute('class', 'validateError');
-            children[i].after(p);
+            var prevSibling = children[i].previousSibling;
+            var id = prevSibling.id + 'childValidError';
+            p.setAttribute('id', id);
+            if (!$('#' + id)[0]) {
+                children[i].after(p);
+            }
             check = false;
         }
     }
