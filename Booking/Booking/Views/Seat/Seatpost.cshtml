@@ -1,0 +1,97 @@
+﻿@using Booking.ViewModels
+@model SeatInCarr
+
+<div class="wagon-list">
+    <h3 class="wagonText">Wagons:   </h3>
+    @foreach (var wagon in Model.CarrOrdersForActionLink)
+    {
+        string text = Convert.ToString(Model.DepartDateTime).Replace(@"/", "%2F").Replace(" ", "%20").Replace(":", "%3A");
+        @Ajax.ActionLink(wagon.ToString(), "FreeSeatsToView", "Seat", new { carrOrder = wagon, TrainNumber = Model.TrainNumber, CarriageTypesJson = Json.Encode(Model.CarriageTypes), BeginStation = Model.BeginStation, EndStation = Model.EndStation, CarriageType = Model.CarriageType, BeginInputStation = Model.BeginInputStation, EndInputStation = Model.EndInputStation, DepartDateTime = Model.DepartDateTime, ArrivalDateTime = Model.ArrivalDateTime, Duration = Model.Duration }, new AjaxOptions { UpdateTargetId = "carrTypeWagon", HttpMethod = "Get" }, new { @class = "wagonLink" });
+    }
+</div>
+
+<h3 class="mess">You can select up to 4 seats at a time</h3>
+
+@using (Html.BeginForm("GetForms", "Ticket", FormMethod.Post, new { onsubmit = "return onClick()" }))
+{
+    <input hidden="hidden" name="TrainNumber" value="@Model.TrainNumber" />
+    <input hidden="hidden" name="CarrOrder" value="@Model.CarrOrder" />
+    <input hidden="hidden" name="BeginInputStation" value="@Model.BeginInputStation" />
+    <input hidden="hidden" name="EndInputStation" value="@Model.EndInputStation" />
+    <input hidden="hidden" name="DepartDateTime" value="@Model.DepartDateTime" />
+
+    <div class="wagon wagonSeatpost">
+        <h4>@Model.CarrOrder</h4>
+        <div class="floor floorSeatpost">
+            @{
+                int leftSeat = 50;
+                int leftLateral = 805;
+                int leftWall = 55;
+                string seatClass = "";
+                string leftSeatStr;
+                string leftWallStr;
+                int count = 1;
+                foreach (var seat in Model.SeatsNumbers)
+                {
+                    if (seat.Key % 2 == 0 && seat.Key < 38)
+                    {
+                        seatClass = "evenCompartmentSeatpostSeating";
+                        leftSeatStr = leftSeat + "px";
+                    }
+                    else if (seat.Key % 2 == 1 && seat.Key < 37)
+                    {
+                        seatClass = "oddCompartmentSeatpostSeating";
+                        leftSeatStr = leftSeat + "px";
+                    }
+                    else
+                    {
+                        seatClass = "lateralSeatpostSeating";
+                        leftSeatStr = leftLateral + "px";
+                    }
+                    if (seat.Value)
+                    {
+                        <div class=@seatClass style="left:@leftSeatStr">
+                            <input type="checkbox" id="@seat.Key" name="seats" value="@seat.Key" class="checkBox" />
+                            <label for="@seat.Key" class="forCheckBoxCSS">@seat.Key</label>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="@string.Format("{0} {1}", seatClass, "inactive")" style="left:@leftSeatStr">@seat.Key</div>
+                    }
+                    if (count % 2 == 0)
+                    {
+                        leftSeat += 45;
+                    }
+                    if (seat.Key > 36)
+                    {
+                        leftLateral -= 45;
+                    }
+                    if (count == 4 && seat.Key < 37)
+                    {
+                        leftWallStr = leftWall + "px";
+                        <div class="wall" style="left:@leftWallStr"></div>
+                        <div class="halfWall" style="left:@leftWallStr; margin-top: 122px;"></div>
+                        leftWall += 90;
+                        count = 0;
+                    }
+                    count++;
+                }
+                leftWallStr = leftWall + "px";
+                <div class="wall" style="left:@leftWallStr"></div>
+                <div class="halfWall" style="left:@leftWallStr; margin-top: 122px;"></div>
+                <div class=" toilet toiletSeatpostF"></div>
+                <div class=" toilet toiletSeatpostS"></div>
+                leftWall += 65;
+                leftWallStr = leftWall + "px";
+                <div class="halfWall" style="left: @leftWallStr"></div>
+                <div class="halfWall" style="left: @leftWallStr; margin-top: 122px;"></div>
+            }
+            <div class="firstRowSeatpost"></div>
+            <div class="secondRowSeatpost"></div>
+            <div class="thirdRowSeatpost"></div>
+        </div>
+    </div>
+
+    <button type="submit" id="submit" class="button">Submit</button>
+}

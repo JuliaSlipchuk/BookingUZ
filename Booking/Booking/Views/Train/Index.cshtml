@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2 style="text-align:center; font-weight: bold; color: black;">WELCOME TO THE TRAIN TICKET BOOKING SITE</h2>
+
+<div>
+    @using (Ajax.BeginForm("GetTrains", "Train", null, new AjaxOptions { UpdateTargetId = "trains", HttpMethod = "Post", LoadingElementId = "loading" }, new { @class = "form" }))
+    {
+        <label for="BeginStat" class="label">Please, enter dispatch station: </label>
+        <input type="text" id="BegStation" name="StartInputStation" required="required" class="form-control textBox" /><br />
+        <label for="EndStat" class="label">Please, enter arrival station: </label>
+        <input type="text" id="EndStation" name="EndInputStation" required="required" class="textBox" /><br />
+
+        <label for="Date" class="label">Please, enter the date: </label>
+        <input type="text" name="DepartDateTime" id="departDateTime" required="required" class="textBox" /><br />
+        <label for="Time" class="label">Please, enter the time: </label>
+        @Html.DropDownList("FromTime", ViewBag.FromTimes as IEnumerable<SelectListItem>, new { @class = "form-control textBox" });
+
+        <table id="trains">
+        </table>
+
+        <div id="loading" style="display: none !important;">
+            <h3>Loading, please wait ...</h3>
+        </div>
+        <button type="submit" class="button">Submit</button>
+    }
+</div>

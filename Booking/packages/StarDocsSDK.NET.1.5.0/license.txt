@@ -1,0 +1,84 @@
+STARDOCS TERMS OF SERVICE AND LIMITED WARRANTY
+
+March 16, 2016
+
+IMPORTANT - READ CAREFULLY
+
+This StarDocs Terms of Service ("TERMS") is a legal agreement between "YOU" (either an individual or entity) and Gnostice Information Technologies Private Limited ("GNOSTICE") governing YOUR use of StarDocs API and the online document-processing service ("GNOSTICE PRODUCT"). The GNOSTICE PRODUCT includes this STARDOCS SOFTWARE and the STARDOCS ONLINE SERVICE, documentation and any associated media or printed materials. The GNOSTICE PRODUCT also includes any updates and supplements to the original GNOSTICE PRODUCT provided to YOU by GNOSTICE.
+
+This agreement comes in to effect as soon as you have completed the purchase of the GNOSTICE PRODUCT after clicking "Buy Now" button on Gnostice Website (GNOSTICE WEBSITE) at http://www.gnostice.com or as soon as you sign up for the trial of the GNOSTICE PRODUCT after clicking on the "Register / Get Usage" button on GNOSTICE WEBSITE.
+
+By installing, copying, accessing, or otherwise using the GNOSTICE PRODUCT, YOU agree to be bound by ALL conditions mentioned in these TERMS. Specifically, YOU must agree to the terms of these TERMS before YOU create any "DERIVED WORKS," that is, software created using the GNOSTICE PRODUCT. If YOU do not agree to the terms of these TERMS, YOU must immediately and permanently remove/uninstall/destroy/delete any installed or installable copies of GNOSTICE PRODUCT in YOUR possession.
+
+PROVISION OF THE SERVICES
+
+YOU can use the GNOSTICE PRODUCT in YOUR DERIVED WORK only if it has substantial material value without the GNOSTICE PRODUCT.
+YOU should use the STARDOCS SDKs for use only with the STARDOCS ONLINE SERVICE.
+YOUR DERIVED WORK can use the GNOSTICE PRODUCT up to the limits specified by GNOSTICE when you purchased the subscription to use the GNOSTICE PRODUCT.
+The measurement made by the GNOSTICE PRODUCT of the usage by the DERIVED WORK will be final.
+GNOSTICE will regularly provide you MONTHLY UPTIME PERCENTAGE of the GNOSTICE PRODUCT. If the MONTHLY UPTIME PERCENTAGE is less than 99.95%, then YOU are eligible for a refund in the amount already paid by YOU to subscribe to the use of the GNOSTICE PRODUCT. The refunds will be as follows:
+
+MONTHLY UPTIME PERCENTAGE	       Percentage of deductions
+99.00% to less than 99.95%	     10%
+Less than 99.00%	               25%
+
+The deduction should be claimed by YOU within a month of occurrence of the downtime. This deduction will be your sole and exclusive remedy for any such claim, barring TERMINATION of this legal agreement. The deduction cannot be claimed in case of
+circumstance outside the control of GNOSTICE, such as natural disaster, war, terrorism, riots, or government/court action.
+any use of the GNOSTICE PRODUCT that was inconsistent with the current published guidance/documentation as provided by GNOSTICE.
+GNOSTICE personnel will not directly process YOUR documents without authorization from YOU.
+GNOSTICE facilities that are used to store and process YOUR documents will adhere to reasonable security standards that are no less protective than the security standards at facilities where GNOSTICE own processes and data are stored.
+CUSTOMER OBLIGATIONS
+
+YOUR DERIVED WORK should use the GNOSTICE PRODUCT for lawful activities. GNOSTICE may have to remove/hold documents if ordered to do so by a court/government order.
+YOUR DERIVED WORK should use the GNOSTICE PRODUCT as specified in its accompanying literature and comply with all restrictions contained in it.
+YOU should not copy, modify, reverse engineer, decompile, translate, disassemble, or otherwise attempt to extract any or all of the source code of the GNOSTICE PRODUCT.
+YOUR DERIVED WORK should not disable or attempt to circumvent any billing/measuring mechanism used to meter YOUR use of the GNOSTICE PRODUCT.
+YOUR DERIVED WORK should ensure that its end-users does not cause the DERIVED WORK to violate these TERMS.
+YOUR DERIVED WORK should not be used to unsolicited bulk messages or distribute malware software.
+YOUR DERIVED WORK should not impair or cause the failure of the STARDOCS ONLINE SERVICE.
+YOUR DERIVED WORK should use only those documents that YOU own or YOU are authorized to use by its owner.
+DATA DISCLOSURE
+
+GNOSTICE will not disclose YOUR documents to law enforcement unless required by law or government/court order. If law enforcement contacts GNOSTICE with a demand for YOUR documents, GNOSTICE will attempt to redirect the law enforcement agency directly to YOU. If compelled to disclose YOUR documents by law enforcement, GNOSTICE will notify YOU and provide a copy of the disclosure demand unless legally prohibited from doing so.
+Upon receipt of any other third party request for YOUR documents, GNOSTICE will only provide YOUR basic contact information to the third party after ascertaining the validity of the request.
+LIMITED WARRANTY AND CONDITIONS
+
+GNOSTICE warrants that the product will perform as specified in its accompanying technical and marketing literature. If the GNOSTICE PRODUCT fails to meet this warranty, YOUR sole remedy will be limited to one of:
+
+GNOSTICE fixing the deficiency in the GNOSTICE PRODUCT and enabling YOU to resume the use of the PRODUCT as was expected of it.
+GNOSTICE refunding the amount paid by YOU to subscribe to the use of the GNOSTICE PRODUCT and terminating this legal agreement.
+GNOSTICE will not be liable for any consequential, indirect, incidental, exemplary, special or punitive damages from any cause relating to the design, manufacture, sale, support or use of the GNOSTICE PRODUCT.
+
+U.S. Federal Agency Entities: The GNOSTICE PRODUCT was developed/acquired solely at private expense and is a commercial computer software and related documentation within the meaning of the applicable U.S. Federal Acquisition Regulation and agency supplements thereto.
+
+All legal claims arising out of or relating to this legal agreement or the services will be governed by Indian law, and will be limited to the jurisdiction of Karnataka High Court or in a mutually agreeable jurisdiction.
+
+GNOSTICE PRODUCT CHANGES
+
+If GNOSTICE discontinues a functionality in the GNOSTICE PRODUCT or makes backwards-incompatible changes in the GNOSTICE PRODUCT, these changes will be listed at the web address
+https://stardocs.gnostice.com/texts/deprecation
+
+GNOSTICE will make financially reasonable efforts to continue providing GNOSTICE PRODUCT as it was earlier, for one year after listing the changes, except when these changes are required:
+
+by law or court/government order
+to avert security or technical risks
+When the changes are made, YOU shall bear all costs imposed by the changes in YOUR DERIVED WORK.
+
+TERMINATION
+
+By YOU: YOU may terminate this legal agreement at any time for any reason. Prior to termination, YOU should retrieve all YOUR documents stored in the GNOSTICE PRODUCT. You should then permanently remove/uninstall/destroy/delete any installed or installable part or copies of GNOSTICE PRODUCT in YOUR possession. You should then serve GNOSTICE a written notice of the termination.
+By GNOSTICE: GNOSTICE may terminate this legal agreement for breach of any of its TERMS. GNOSTICE may also terminate/suspend this legal agreement if required by a court/government order.
+Upon termination, all rights regarding the use of GNOSTICE PRODUCT will cease, except for the retrieval of documents hosted in the GNOSTICE PRODUCT within 180 days from the date of notification of the termination.
+
+DISCLAIMER
+
+EXCEPT AS EXPRESSLY PROVIDED FOR IN THIS LEGAL AGREEMENT, TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, GNOSTICE DOES NOT MAKE ANY OTHER WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE. GNOSTICE IS NOT LIABLE FOR THE FAILURE TO STORE ANY DATA AND OTHER COMMUNICATIONS USED BY THE GNOSTICE PRODUCT. YOU ARE SOLELY RESPONSIBLE FOR SECURING AND BACKING UP YOUR DERIVED WORKS AND THEIR DATA. NEITHER DOES GNOSTICE WARRANT THAT THE OPERATION OF THE GNOSTICE PRODUCT WILL BE ERROR-FREE OR UNINTERRUPTED. THE GNOSTICE PRODUCT IS NOT DESIGNED FOR HIGH-RISK ACTIVITIES.
+
+INDEMNIFICATION
+
+By YOU: Unless prohibited by applicable law, YOU should defend and indemnify GNOSTICE against indemnified liabilities in any third-party legal proceeding to the extent arising from your use of the GNOSTICE PRODUCT.
+By GNOSTICE: GNOSTICE will defend and indemnify YOU against indemnified liabilities in any third-party legal proceeding to the extent arising solely from an allegation that use of the GNOSTICE PRODUCT violates the third-party's patent(s), copyright(s), trade secret(s), and/or trademark(s).
+MARKETING
+
+YOU also agree that GNOSTICE may identify YOU or YOUR company/organization as a GNOSTICE customer or a user of GNOSTICE's product(s) in its marketing material and/or Website. YOU hereby grant GNOSTICE permission to use YOUR name, trade name or trademark in this way. If for any reason YOU do not wish to be bound by this clause, GNOSTICE will cease such use upon receipt of YOUR request.
+

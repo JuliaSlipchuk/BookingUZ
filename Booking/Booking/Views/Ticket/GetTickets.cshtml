@@ -1,0 +1,29 @@
+﻿@using Gnostice.PDFOne.Extensions.MVC
+@model Booking.ViewModelsAndSubViewModels.FilePdfTickets
+
+@{
+    ViewBag.Title = "GetTickets";
+    Layout = null;
+}
+
+<script
+  src="https://code.jquery.com/jquery-1.10.2.min.js"
+  integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="
+  crossorigin="anonymous">
+</script>
+
+@{ 
+    Html.Gnostice().RenderStyleSheets();
+    Html.Gnostice().RenderScripts();
+}
+
+<div>
+    @{ 
+        PDFViewerSettings pDFViewerSettings = new PDFViewerSettings();
+        pDFViewerSettings.Width = System.Web.UI.WebControls.Unit.Pixel(700);
+        pDFViewerSettings.Height = System.Web.UI.WebControls.Unit.Pixel(700);
+        pDFViewerSettings.ClientObjectName = "tickets";
+
+        Html.Gnostice().PDFViewer(pDFViewerSettings).LoadDocument(Server.MapPath("~/Tickets/") + Model.FileName).Render();
+    }
+</div>

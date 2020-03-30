@@ -1,0 +1,17 @@
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.BusinessLogic.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.BusinessLogic.pdb
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.DataAccess.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.Models.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.DataAccess.pdb
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.DataAccess.dll.config
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.Models.pdb
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\Booking.Models.dll.config
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Virtuace\HW6\Booking.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\Virtuace\HW6\Booking.BusinessLogic\obj\Debug\Booking.BusinessLogic.csprojAssemblyReference.cache
+D:\Virtuace\HW6\Booking.BusinessLogic\obj\Debug\Booking.BusinessLogic.csproj.CopyComplete
+D:\Virtuace\HW6\Booking.BusinessLogic\obj\Debug\Booking.BusinessLogic.dll
+D:\Virtuace\HW6\Booking.BusinessLogic\obj\Debug\Booking.BusinessLogic.pdb

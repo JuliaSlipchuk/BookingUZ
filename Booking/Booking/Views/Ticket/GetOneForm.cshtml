@@ -1,0 +1,29 @@
+﻿@using Booking.ViewModels
+@model InformAboutPassengers
+
+<div class="formMini">
+    @{
+        int seatNumb = Convert.ToInt32(ViewData["seat"]);
+    }
+    <input id="seatNumber" hidden="hidden" value="@seatNumb" />
+    <label for="carrOrder" class="labelMini">Carriage order: </label>
+    <input type="text" required="required" name="CarrOrder" value="@ViewData["carrOrder"]" readonly="readonly" class="textBoxMini" /><br />
+    <label for="seatNumber" class="labelMini">Seat number: </label>
+    <input type="text" required="required" name="SeatNumber" value="@seatNumb" readonly="readonly" class="textBoxMini" /><br />
+    <label for="FirstName" class="labelMini">Please, enter your first name: </label>
+    <input type="text" required="required" name="FirstName" class="textBoxMini" /><br />
+    <label for="LastName" class="labelMini">Please, enter your last name: </label>
+    <input type="text" required="required" name="LastName" class="textBoxMini" /><br />
+    <label for="BirthDate" class="labelMini">Choose your birth date: </label>
+    <input type="text" name="BirthDate" id="@seatNumb" class="textBoxMini" required="required" /><br />
+    <label for="personType" class="labelMini">Please, select your person type: </label>
+    @Html.DropDownList("PersonType", ViewData["PersonTypes"] as IEnumerable<SelectListItem>, new { @class = "form-control textBoxMini", @id = "personTypes" + seatNumb })
+    <label for="Phone" class="labelMini" style="margin-top: 22px !important;">Please, enter your phone: </label>
+    <input type="tel" required="required" name="Phone" class="textBoxMini" /><br />
+    <label for="Email" class="labelMini">Please, enter your email: </label>
+    <input type="email" required="required" name="Email" class="textBoxMini" /><br />
+    <input type="checkbox" name="HaveTea" class="checkbox checkBoxMini" value="@seatNumb" />
+    <label for="HaveTea" class="labelMiniCheckBox">Have one tea</label><br />
+    <input type="checkbox" name="HaveBed" class="checkbox checkBoxMini" value="@seatNumb" />
+    <label for="HaveBed" class="labelMiniCheckBox">Have bed</label>
+</div>

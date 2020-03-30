@@ -1,0 +1,84 @@
+﻿@using Booking.ViewModels
+@model SeatInCarr
+
+<div class="wagon-list">
+    <h3 class="wagonText">Wagons:   </h3>
+    @foreach (var wagon in Model.CarrOrdersForActionLink)
+    {
+        string text = Convert.ToString(Model.DepartDateTime).Replace(@"/", "%2F").Replace(" ", "%20").Replace(":", "%3A");
+        @Ajax.ActionLink(wagon.ToString(), "FreeSeatsToView", "Seat", new { carrOrder = wagon, TrainNumber = Model.TrainNumber, CarriageTypesJson = Json.Encode(Model.CarriageTypes), BeginStation = Model.BeginStation, EndStation = Model.EndStation, CarriageType = Model.CarriageType, BeginInputStation = Model.BeginInputStation, EndInputStation = Model.EndInputStation, DepartDateTime = Model.DepartDateTime, ArrivalDateTime = Model.ArrivalDateTime, Duration = Model.Duration }, new AjaxOptions { UpdateTargetId = "carrTypeWagon", HttpMethod = "Get" }, new { @class = "wagonLink" });
+    }
+</div>
+
+<h3 class="mess">You can select up to 4 seats at a time</h3>
+
+@using (Html.BeginForm("GetForms", "Ticket", FormMethod.Post, new { onsubmit = "return onClick()" }))
+{
+    <input hidden="hidden" name="TrainNumber" value="@Model.TrainNumber" />
+    <input hidden="hidden" name="CarrOrder" value="@Model.CarrOrder" />
+    <input hidden="hidden" name="BeginInputStation" value="@Model.BeginInputStation" />
+    <input hidden="hidden" name="EndInputStation" value="@Model.EndInputStation" />
+    <input hidden="hidden" name="DepartDateTime" value="@Model.DepartDateTime" />
+
+    <div class="wagon wagonSeating">
+        <h4>@Model.CarrOrder</h4>
+        <div class="floor floorSeating">
+            @{
+                string seatClass;
+                int leftSeat = 30;
+                int count = 1;
+                string leftSeatStr = "";
+                foreach (var seat in Model.SeatsNumbers)
+                {
+                    if (seat.Key % 2 == 0 && seat.Key < 41)
+                    {
+                        seatClass = "evenCompartmentSeatpostSeating";
+                    }
+                    else if (seat.Key % 2 == 1 && seat.Key < 40)
+                    {
+                        seatClass = "oddCompartmentSeatpostSeating";
+                    }
+                    else if (seat.Key % 2 == 0)
+                    {
+                        seatClass = "lateralSeatpostSeating";
+                    }
+                    else
+                    {
+                        seatClass = "otherInSeating";
+                    }
+                    leftSeatStr = leftSeat + "px";
+                    if (seat.Value)
+                    {
+                        <div class=@seatClass style="left:@leftSeatStr">
+                            <input type="checkbox" id="@seat.Key" name="seats" value="@seat.Key" class="checkBox" />
+                            <label for="@seat.Key" class="forCheckBoxCSS">@seat.Key</label>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="@string.Format("{0} {1}", seatClass, "inactive")" style="left:@leftSeatStr">@seat.Key</div>
+                    }
+                    if (count % 2 == 0 && seat.Key < 41)
+                    {
+                        leftSeat += 50;
+                        count = 0;
+                    }
+                    else if (count % 2 == 0)
+                    {
+                        leftSeat -= 50;
+                        count = 0;
+                    }
+                    count++;
+                }
+                <div class="wall" style="left: 1035px"></div>
+                <div class="wall" style="left: 90px; margin-top: 133px;"></div>
+                <div class="toilet toiletSeatingF"></div>
+                <div class="toilet toiletSeatingS"></div>
+                <div class="wall" style="left: 1110px"></div>
+                <div class="wall" style="left: 1110px; margin-top: 133px;"></div>
+            }
+        </div>
+    </div>
+
+    <button type="submit" id="submit" class="button">Submit</button>
+}

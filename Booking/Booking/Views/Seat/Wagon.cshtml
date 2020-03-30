@@ -1,0 +1,39 @@
+﻿@using Booking.ViewModels
+@model SeatInCarr
+
+<div class="train">
+    <table>
+        <thead>
+            <th>Train number</th>
+            <th>Start station</th>
+            <th>End station</th>
+            <th>Departure date-time</th>
+            <th>Arrival date-time</th>
+            <th>Duration</th>
+            <th>Carriage types</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.TrainNumber</td>
+                <td>@Model.BeginStation</td>
+                <td>@Model.EndStation</td>
+                <td>@Model.DepartDateTime</td>
+                <td>@Model.ArrivalDateTime</td>
+                <td>@Model.Duration</td>
+                <td>
+                    <ul>
+                        @foreach (CarrTypesAndCountOfSeats type in Model.CarriageTypes)
+                        {
+                            <li>@String.Format(@type.CarrType + " " + @type.CountOfSeats)<br />@Ajax.ActionLink("Show free seats", "GetAnotherCarrType", "Seat", new { TrainNumber = Model.TrainNumber, CarriageTypesJson = Json.Encode(Model.CarriageTypes), BeginStation = Model.BeginStation, EndStation = Model.EndStation, CarriageType = type.CarrType, BeginInputStation = Model.BeginInputStation, EndInputStation = Model.EndInputStation, DepartDateTime = Model.DepartDateTime, ArrivalDateTime = Model.ArrivalDateTime, Duration = Model.Duration }, new AjaxOptions { UpdateTargetId = "carrTypeWagon", HttpMethod = "Get" }, new { @class = "lnk" });</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="carrTypeWagon">
+    @{Html.RenderPartial(Model.CarriageType, Model);}
+</div>
+

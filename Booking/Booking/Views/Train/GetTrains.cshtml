@@ -1,0 +1,41 @@
+﻿@using Booking.ViewModels;
+@model IList<TrainByStationsAndDate>
+@{
+    if (Model == null || Model.Count() == 0)
+    {
+        <h3 style="color:red; font-size: x-large; font-weight: bold; margin-left: 347px">Sorry, no routes found</h3>
+    }
+    else
+    {
+        <thead>
+            <th>Train number</th>
+            <th>Start station</th>
+            <th>End station</th>
+            <th>Departure date-time</th>
+            <th>Arrival date-time</th>
+            <th>Duration</th>
+            <th>Carriage types</th>
+        </thead>
+        <tbody>
+            @foreach (TrainByStationsAndDate train in Model)
+            {
+                <tr>
+                    <td>@train.TrainNumber</td>
+                    <td>@train.StartStation</td>
+                    <td>@train.EndStation</td>
+                    <td>@train.DepartDateTime</td>
+                    <td>@train.ArrivalDateTime</td>
+                    <td>@train.Duration</td>
+                    <td>
+                        <ul>
+                            @foreach (CarrTypesAndCountOfSeats type in train.CarriageTypes)
+                            {
+                                <li>@String.Format(@type.CarrType + " " + @type.CountOfSeats)<br />@Html.ActionLink("Show free seats", "GetFreeSeatsFromDb", "Seat", new { TrainNumber = train.TrainNumber, CarriageTypesJson = Json.Encode(train.CarriageTypes), BeginStation = train.StartStation, EndStation = train.EndStation, CarriageType = type.CarrType, BeginInputStation = train.StartInputStation, EndInputStation = train.EndInputStation, DepartDateTime = String.Format("{0:MM/dd/yyyy HH:mm:ss}", train.DepartDateTime), ArrivalDateTime = train.ArrivalDateTime, Duration = train.Duration }, new { @class = "lnk" });</li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    }
+}

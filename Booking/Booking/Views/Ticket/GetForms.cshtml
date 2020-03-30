@@ -1,0 +1,18 @@
+﻿@using Booking.ViewModelsAndSubViewModels
+@model ForCreateForms
+
+@{
+    ViewBag.Title = "GetForms";
+}
+
+@{
+    using(Html.BeginForm("GetTickets", "Ticket", new { TrainNumber = Model.TrainNumber, DepartDateTime = Model.DepartDateTime, CarriageOrder = Model.CarriageOrder, BeginInputStation = Model.BeginInputStation, EndInputStation = Model.EndInputStation }, FormMethod.Post, new { @class = "form" }))
+    {
+        foreach(var seat in Model.SeatsNumbers)
+        {
+            Html.RenderPartial("GetOneForm", new ViewDataDictionary { { "seat", seat }, { "carrOrder", Model.CarriageOrder }, { "PersonTypes", Model.PersonTypes} });
+        }
+
+        <button type="submit" class="button" id="submitForms" onclick="return validate()">Submit</button>
+    }
+}

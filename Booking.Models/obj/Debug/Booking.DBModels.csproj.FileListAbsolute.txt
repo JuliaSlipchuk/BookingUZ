@@ -1,0 +1,16 @@
+D:\Virtuace\HW7\Booking.DBModels\obj\Debug\Booking.DBModels.csprojAssemblyReference.cache
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\Booking.DBModels.dll.config
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\Booking.DBModels.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\Booking.DBModels.pdb
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\EntityFramework.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\EntityFramework.SqlServer.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\EntityFramework.xml
+D:\Virtuace\HW7\Booking.DBModels\bin\Debug\EntityFramework.SqlServer.xml
+D:\Virtuace\HW7\Booking.DBModels\obj\Debug\Booking.DBModels.csproj.CopyComplete
+D:\Virtuace\HW7\Booking.DBModels\obj\Debug\Booking.DBModels.dll
+D:\Virtuace\HW7\Booking.DBModels\obj\Debug\Booking.DBModels.pdb

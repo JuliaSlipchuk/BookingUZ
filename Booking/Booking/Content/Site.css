@@ -1,0 +1,558 @@
+﻿@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../fonts/caviar_dreams.eot'); /* IE 9 Compatibility Mode */
+    src: url('../fonts/caviar_dreams.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+    url('../fonts/caviar_dreams.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/caviar_dreams.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+    url('../fonts/caviar_dreams.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/caviar_dreams.svg#caviar_dreams') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.validateError {
+    margin-left: 20%;
+    color: red;
+    font-size: 16px;
+}
+
+.mess {
+    color: violet;
+    border: 3px dashed black;
+    margin: 10px 300px 10px 300px;
+}
+
+.checkBox {
+    display: none;
+}
+
+:checked + .forCheckBoxS {
+    display: block;
+    margin: 5px 2px 5px 2px;
+    background-color: mediumorchid;
+    border: 2px solid black;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+:checked + .forCheckBoxCSS {
+    display: block;
+    margin: 2px 2px 1px 2px;
+    background-color: mediumorchid;
+    border: 2px solid black;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.train {
+    margin-left: 70px;
+}
+
+#loading h3 {
+    display: none !important;
+    color: aliceblue !important;
+    font-weight: bold !important;
+    text-align: center !important;
+}
+
+.wagonText {
+    display: inline-block !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+    margin-right: 20px !important;
+}
+
+.wagon-list {
+    margin-top: 10px;
+    display: block;
+    border-style: solid;
+    border-color: #d7dce1;
+    border-width: 1px 1px 0 1px;
+    background-color: darkgray !important;
+    padding: .7rem 3rem 0 11rem;
+    white-space: nowrap;
+}
+
+.wagonLink {
+    text-align: center !important;
+    font-size: 18px !important;
+    width: 47px !important;
+    height: 25px !important;
+    display: inline-block;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 0 .6rem .7rem 0;
+    vertical-align: top;
+    border: 1px solid transparent;
+    border-radius: .2rem;
+    background-image: url("https://booking.uz.gov.ua/i/img/desktop/wagon.png");
+    cursor: pointer;
+    position: relative;
+}
+
+.num {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-left: .5rem;
+    width: 4.5rem;
+    text-align: center;
+    vertical-align: top;
+    text-shadow: 0 0 5px #000;
+}
+
+.wagCurrent {
+    border-color: #fff;
+    box-shadow: inset 0 0 3px 0 #fff;
+}
+
+.wagon {
+    display: inline-block !important;
+}
+
+.wagonSuite {
+    margin: 15px 300px 50px 60px !important;
+}
+
+.wagonCompartment {
+    margin: 15px 300px 50px 60px !important;
+}
+
+.wagonSeatpost {
+    margin: 15px 200px 50px 60px !important;
+}
+
+.wagonSeating {
+    margin: 15px 150px 50px 10px;
+}
+
+.floor {
+    border: .6rem solid black !important;
+    border-radius: 1.5rem !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    min-width: calc(100% - 1.2rem) !important;
+}
+
+.floorSuite {
+    width: 1000px !important;
+    height: 150px !important;
+}
+
+.floorCompartment {
+    width: 1000px !important;
+    height: 150px !important;
+}
+
+.floorSeatpost {
+    width: 1000px !important;
+    height: 177px !important;
+}
+
+.floorSeating {
+    width: 1180px !important;
+    height: 220px !important;
+}
+.suite {
+    display: inline-block !important;
+    border: 1px solid blue !important;
+    background-color: thistle;
+    position: absolute !important;
+    text-align: center !important;
+    top: 5px !important;
+    width: 32px !important;
+    height: 70px !important;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-top: 3px;
+    padding-top: 22px;
+}
+
+.evenCompartmentSeatpostSeating {
+    display: inline-block !important;
+    border: 1px solid blue !important;
+    background-color: thistle;
+    position: absolute !important;
+    text-align: center !important;
+    top: 5px !important;
+    width: 28px !important;
+    height: 29px !important;
+    margin-bottom: 10px !important;
+    margin-left: 15px !important;
+    margin-top: 3px !important;
+    padding-top: 2px !important;
+}
+
+.oddCompartmentSeatpostSeating {
+    display: inline-block !important;
+    border: 1px solid blue !important;
+    background-color: thistle;
+    position: absolute !important;
+    text-align: center !important;
+    top: 35px !important;
+    width: 28px !important;
+    height: 29px !important;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-top: 8px;
+    padding-top: 2px;
+}
+
+.lateralSeatpostSeating {
+    display: inline-block !important;
+    border: 1px solid blue !important;
+    background-color: thistle;
+    position: absolute !important;
+    text-align: center !important;
+    top: 120px !important;
+    width: 28px !important;
+    height: 29px !important;
+    margin-bottom: 3px;
+    margin-left: 25px;
+    margin-top: 8px;
+    padding-top: 2px;
+}
+
+.otherInSeating {
+    display: inline-block !important;
+    border: 1px solid blue !important;
+    background-color: thistle;
+    position: absolute !important;
+    text-align: center !important;
+    top: 155px !important;
+    width: 28px !important;
+    height: 29px !important;
+    margin-bottom: 3px;
+    margin-left: 25px;
+    margin-top: 8px;
+    padding-top: 2px;
+}
+
+.wall {
+    display: inline-block !important;
+    width: .2rem !important;
+    background-color: black !important;
+    top: 0px !important;
+    height: 77px !important;
+    line-height: 77px !important;
+    position: absolute !important;
+}
+
+.halfWall {
+    display: inline-block !important;
+    width: .2rem !important;
+    background-color: black !important;
+    top: 0px !important;
+    position: absolute !important;
+    line-height: 44px !important;
+    height: 44px !important;
+}
+
+.toilet {
+    left: 798px;
+    top: 5px;
+    width: 32px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 5px;
+    background: url('https://booking.uz.gov.ua/i/img/coach/toilet_full.png') no-repeat center;
+    background-size: contain;
+}
+
+.toiletSuiteF {
+    margin-left: 11px;
+    margin-top: 8px;
+    display: inline-block;
+}
+.toiletSuiteS {
+    margin-left: 820px;
+    display: inline-block;
+}
+
+.toiletCompartmentF {
+    display: inline-block;
+    margin-left: 10px;
+}
+.toiletCompartmentS {
+    display: inline-block;
+    margin-left: 830px;
+}
+
+.toiletSeatpostF {
+    display: inline-block;
+    margin-left: 10px;
+}
+.toiletSeatpostS {
+    display: inline-block;
+    margin-left: 830px;
+}
+
+.toiletSeatingF {
+    margin-top: 15px;
+    margin-left: 1055px;
+}
+.toiletSeatingS {
+    margin-top: 130px;
+    margin-left: 40px;
+}
+
+.inactive {
+    background-color: dimgray;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+* {
+    font-family: 'Caviar Dreams' !important;
+    color: black;
+    font-stretch: semi-expanded;
+}
+
+h2 {
+    text-align: center;
+    border: 2px double black;
+    font-weight: 700;
+}
+
+h4 {
+    text-align: center;
+    font-weight: 600;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+}
+
+table {
+    margin-top: 50px;
+    font-size: 15px !important;
+    border-collapse: collapse !important;
+    text-align: center !important;
+    font-weight: bold;
+}
+
+th, td:first-child {
+    background-color: dimgrey !important;
+    color: azure !important;
+    padding: 10px 20px !important;
+}
+
+th, td {
+    border-style: solid !important;
+    border-width: 0 1px 1px 0 !important;
+    border-color: #808080 !important;
+}
+
+td {
+    background-color: lightgray !important;
+}
+
+td:last-child {
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+th:first-child {
+    text-align: left !important;
+}
+
+.formMini {
+    margin: 5% 10% 5% 10%;
+    max-width: 100%;
+    padding: 30px 30px 25px 30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: thistle;
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+.labelMini {
+    display: inline-block;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 24%;
+    color: dimgrey;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.textBoxMini {
+    background-color: darkgray;
+    color: black;
+    width: 50%;
+    height: 35px;
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+    margin-left: 23%;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white !important;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 6px;
+    overflow: hidden;
+}
+
+.labelMiniCheckBox {
+    display: inline-block;
+    color: dimgrey;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.checkBoxMini {
+    display: inline-block;
+    margin-left: 24% !important;
+    width: 19px;
+    height: 19px;
+}
+
+.form {
+    margin: 5% 5% 5% 5%;
+    max-width: 100%;
+    padding: 30px 30px 6px 30px;
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+
+.label {
+    color: white !important;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.textBox {
+    background: rgba(255, 255, 255, 0.4);
+    width: 60%;
+    height: 50px;
+    margin: 2% 10% 5% 10%;
+    border: 1px solid rgba(255,255,255,.6);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 80;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.gray {
+    background-color: #808080;
+}
+
+.rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+button {
+    width: 150px;
+    text-decoration: none;
+    padding-top: 9px;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    display: block;
+    margin: 20px auto;
+    font: normal 17px arial;
+}
+
+buttonSmall {
+    height: 30px;
+}
+
+buttonBig {
+    height: 50px;
+}
+
+button:not(.active) {
+    box-shadow: inset 0 1px 1px rgba(111, 55, 125, 0.8), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #150a1e;
+    background-image: linear-gradient(#808080, #000000);
+    text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #311d47;
+}
+
+    button:not(.active):hover,
+    button:not(.active):focus {
+        transition: color 200ms linear, text-shadow 500ms linear;
+        color: #fff;
+        text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 0 10px rgba(223, 206, 228, 0.4), 0 0 2px #2a153c;
+    }
+
+button:not(:hover) {
+    transition: 0.6s;
+}
+
+.inSquare {
+    border: 2px solid black;
+    padding: 5px 5px 5px 5px;
+    background-color: grey;
+    opacity: 0.8;
+}
+
+.lnk {
+    color: dimgray !important;
+    font-size: 16px;
+}
+
+div {
+    display: block;
+}
